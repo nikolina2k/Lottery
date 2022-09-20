@@ -22,9 +22,14 @@ function Tickets() {
       interval={null}
       activeIndex={activeIndex}
     >
-      {tickets.map((ticket) => (
-        <Carousel.Item>
-          <Ticket onNext={nextSlide} onPrev={prevSlide} idx={ticket} />
+      {tickets.map((ticket, idx) => (
+        <Carousel.Item key={idx}>
+          <Ticket
+            onNext={nextSlide}
+            onPrev={prevSlide}
+            idx={ticket}
+            total={20}
+          />
         </Carousel.Item>
       ))}
     </Carousel>

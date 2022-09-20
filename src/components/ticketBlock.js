@@ -1,7 +1,7 @@
 import Card from "react-bootstrap/Card";
 import Nmbr from "./nmbr";
 
-function TicketBlock() {
+function TicketBlock(props) {
   return (
     <Card bg="transparent">
       <Card.Body >
@@ -10,8 +10,8 @@ function TicketBlock() {
           Choose 8 numbers
         </Card.Subtitle>
         <div>
-          <Nmbr />
-          <Nmbr />
+          <Nmbr isSelected={true} number={1} />
+          <Nmbr number={2} />
         </div>
       </Card.Body>
     </Card>

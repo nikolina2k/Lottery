@@ -5,7 +5,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function Ticket({ onNext, onPrev, idx }) {
+function Ticket({ onNext, onPrev, idx, total, selectedNumbers }) {
+  const allNumbers = [];
+  for (let i = 0; i < total; i++) {
+    allNumbers.push(i + 1);
+  }
+  console.log(allNumbers);
+
   return (
     <Card style={{ color: "white" }} className="bg-dark box">
       <Card.Title style={{ margin: "1em" }}>
