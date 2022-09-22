@@ -83,41 +83,40 @@ function App() {
       <header style={{ marginBottom: "68px" }}>
         <Navbar />
       </header>
-      <Container as="main" style={{ paddingTop: "4em" }}>
-        <Row xs={1} md={2}>
-          <Col xs={12} md={5} lg={4} xl={3}>
-            <Timer />
-          </Col>
-          <Col xs={12} md={7} lg={8} xl={9}>
-            <Carousel
-              variant="dark"
-              controls={false}
-              indicators={false}
-              interval={null}
-              activeIndex={activeIndex}
-            >
-              {tickets.map((ticket, idx) => (
-                <Carousel.Item key={idx}>
-                  <Ticket
-                    onNext={nextSlide}
-                    onPrev={prevSlide}
-                    idx={idx + 1}
-                    ticket={ticket}
-                    onToggleNumberBlock1={(n) => toggleNumberBlock1(idx, n)}
-                    onToggleNumberBlock2={(n) => toggleNumberBlock2(idx, n)}
-                  />
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </Col>
-          <Col xs={12} md={5} lg={4} xl={3}>
-            <TmrButtons
-              onGetTicket={addTicket}
-              validTicketCount={validTicketCount}
-              totalPrice={totalPrice}
-            />
-          </Col>
-        </Row>
+      <Container className="main" as="main" style={{ paddingTop: "4em" }}>
+        <div className="timer">
+          <Timer />
+        </div>
+        <div className="tickets">
+          <Carousel
+            variant="dark"
+            className="h-100"
+            controls={false}
+            indicators={false}
+            interval={null}
+            activeIndex={activeIndex}
+          >
+            {tickets.map((ticket, idx) => (
+              <Carousel.Item key={idx} className="h-100">
+                <Ticket
+                  onNext={nextSlide}
+                  onPrev={prevSlide}
+                  idx={idx + 1}
+                  ticket={ticket}
+                  onToggleNumberBlock1={(n) => toggleNumberBlock1(idx, n)}
+                  onToggleNumberBlock2={(n) => toggleNumberBlock2(idx, n)}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+        <div className="tmr-buttons">
+          <TmrButtons
+            onGetTicket={addTicket}
+            validTicketCount={validTicketCount}
+            totalPrice={totalPrice}
+          />
+        </div>
       </Container>
       {/* <main className="container">
       <div className='d-flex'>

@@ -13,7 +13,7 @@ function TmrButtons({ onGetTicket, validTicketCount, totalPrice }) {
           <Button
             onClick={onGetTicket}
             variant="dark"
-            style={{ marginBottom: "1em", display: "block", width: "100%" }}
+            style={{ display: "block", width: "100%" }}
           >
             Get ticket
           </Button>
@@ -23,6 +23,7 @@ function TmrButtons({ onGetTicket, validTicketCount, totalPrice }) {
             style={{
               display: validTicketCount > 0 ? "block" : "none",
               width: "100%",
+              marginTop: "1em",
             }}
           >
             Buy {validTicketCount} ticket{validTicketCount > 1 ? "s" : ""} for{" "}

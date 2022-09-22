@@ -14,8 +14,8 @@ function Ticket({
   onToggleNumberBlock2,
 }) {
   return (
-    <Card style={{ color: "white" }} className="bg-dark box">
-      <Card.Title style={{ margin: "1em", fontWeight: "700"}}>
+    <Card style={{ color: "white" }} className="bg-dark box h-100">
+      <Card.Title style={{ margin: "1em", fontWeight: "700" }}>
         Card {idx}
         <div style={{ display: "inline-block", float: "right" }}>
           <button
