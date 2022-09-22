@@ -5,16 +5,17 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function Ticket({ onNext, onPrev, idx, total, selectedNumbers }) {
-  const allNumbers = [];
-  for (let i = 0; i < total; i++) {
-    allNumbers.push(i + 1);
-  }
-  console.log(allNumbers);
-
+function Ticket({
+  onNext,
+  onPrev,
+  idx,
+  ticket,
+  onToggleNumberBlock1,
+  onToggleNumberBlock2,
+}) {
   return (
     <Card style={{ color: "white" }} className="bg-dark box">
-      <Card.Title style={{ margin: "1em" }}>
+      <Card.Title style={{ margin: "1em", fontWeight: "700"}}>
         Card {idx}
         <div style={{ display: "inline-block", float: "right" }}>
           <button
@@ -56,10 +57,18 @@ function Ticket({ onNext, onPrev, idx, total, selectedNumbers }) {
         <Container>
           <Row xs={1} md={2}>
             <Col>
-              <TicketBlock />
+              <TicketBlock
+                total={20}
+                selectedNumbers={ticket.block1}
+                onToggleNumber={onToggleNumberBlock1}
+              />
             </Col>
             <Col>
-              <TicketBlock2 />
+              <TicketBlock2
+                total={4}
+                selectedNumbers={ticket.block2}
+                onToggleNumber={onToggleNumberBlock2}
+              />
             </Col>
           </Row>
         </Container>

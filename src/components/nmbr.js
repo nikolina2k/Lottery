@@ -1,16 +1,18 @@
 import Button from "react-bootstrap/Button";
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
+import "./nmbr.css";
 
 function Nmbr(props) {
+  const { number, isSelected, onClick } = props;
 
-    const { number, isSelected } = props;
-
-
-
-//   function addNmbr() {}
-
-  return <Button variant={isSelected ? "light" : "secondary"}>{number}</Button>;
+  return (
+    <Button
+      variant={isSelected ? "light" : "secondary"}
+      onClick={onClick}
+      className="number"
+    >
+      {number}
+    </Button>
+  );
 }
 
 export default Nmbr;

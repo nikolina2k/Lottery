@@ -1,0 +1,7 @@
+.number {
+  border: 2px solid transparent !important;
+}
+
+.number:focus {
+  border: 2px solid green !important;
+}
