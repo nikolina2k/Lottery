@@ -81,7 +81,7 @@ function App() {
   return (
     <>
       <header style={{ marginBottom: "68px" }}>
-        <Navbar />
+        <Navbar totalPrice={totalPrice} />
       </header>
       <Container className="main" as="main" style={{ paddingTop: "4em" }}>
         <div className="timer">

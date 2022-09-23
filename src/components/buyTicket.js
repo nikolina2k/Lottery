@@ -10,7 +10,11 @@ function BuyTicket({ show, onHide, validTicketCount, totalPrice }) {
       aria-labelledby="modallabelig"
       centered
     >
-      <Modal.Header closeButton className="bg-dark text-white" closeVariant="white">
+      <Modal.Header
+        closeButton
+        className="bg-dark text-white"
+        closeVariant="white"
+      >
         <Modal.Title id="modaltitleig">To pay {totalPrice} ₽</Modal.Title>
       </Modal.Header>
       <Modal.Body className="bg-dark text-white">
@@ -21,7 +25,9 @@ function BuyTicket({ show, onHide, validTicketCount, totalPrice }) {
         <p>till 8th Feb - 08:00</p>
       </Modal.Body>
       <Modal.Footer className="bg-dark text-white">
-        <Button onClick={onHide} variant="success">Buy</Button>
+        <Button onClick={onHide} variant="success">
+          Buy
+        </Button>
       </Modal.Footer>
     </Modal>
   );
