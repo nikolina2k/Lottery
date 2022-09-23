@@ -54,3 +54,21 @@ code {
 .carousel-inner {
   height: 100%;
 }
+
+.tickets-modal-content {
+  width: fit-content;
+  margin: auto;
+}
+
+.ticket-types {
+  border: 2px solid transparent !important;
+  padding: 7px;
+}
+
+.ticket-types:focus {
+  border: 2px solid green !important;
+}
+
+.ticket-types:hover {
+  border: 2px solid green !important;
+}

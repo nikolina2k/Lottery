@@ -4,8 +4,6 @@ import Ticket from "./components/ticket.js";
 import Timer from "./components/timer.js";
 import TmrButtons from "./components/tmrButtons.js";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 
 const PRICE_PER_NUMBER = 300;
@@ -118,12 +116,6 @@ function App() {
           />
         </div>
       </Container>
-      {/* <main className="container">
-      <div className='d-flex'>
-      <Timer />
-      <Ticket />        
-      </div>
-    </main> */}
     </>
   );
 }
